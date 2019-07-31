@@ -1,0 +1,30 @@
+{
+    "name": "Organization",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "organizationProduct",
+            "otherEntityRelationshipName": "organization",
+            "relationshipName": "organizationProduct"
+        }
+    ],
+    "changelogDate": "20190730135553",
+    "entityTableName": "organization",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,34 @@
+{
+    "name": "OrganizationProduct",
+    "fields": [
+        {
+            "fieldName": "status",
+            "fieldType": "Boolean"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "organization",
+            "otherEntityRelationshipName": "organizationProduct",
+            "relationshipName": "organization",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "product",
+            "otherEntityRelationshipName": "organizationProduct",
+            "relationshipName": "product",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190730135554",
+    "entityTableName": "organization_product",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

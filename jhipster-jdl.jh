@@ -1,0 +1,24 @@
+
+entity Organization {
+	name String,
+    description String,
+}
+
+entity OrganizationProduct {
+    status Boolean
+}
+
+entity Product {
+	name String,
+    description String
+}
+
+
+relationship OneToMany {
+	Organization to OrganizationProduct
+    Product to OrganizationProduct
+}
+
+dto * with mapstruct
+paginate * with pagination
+service	 * with serviceClass

@@ -1,0 +1,39 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="organizationProduct">
+            <h2><span>Organization Product</span> {{organizationProduct.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Status</span></dt>
+                <dd>
+                    <span>{{organizationProduct.status}}</span>
+                </dd>
+                <dt><span>Organization</span></dt>
+                <dd>
+                    <div *ngIf="organizationProduct.organizationId">
+                        <a [routerLink]="['/organization', organizationProduct.organizationId, 'view']">{{organizationProduct.organizationId}}</a>
+                    </div>
+                </dd>
+                <dt><span>Product</span></dt>
+                <dd>
+                    <div *ngIf="organizationProduct.productId">
+                        <a [routerLink]="['/product', organizationProduct.productId, 'view']">{{organizationProduct.productId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/organization-product', organizationProduct.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
